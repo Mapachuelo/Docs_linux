@@ -13,17 +13,6 @@ Graficas:
 
 [Documentación sobre linux en español](folder/Docs.es.md)
 
-## Script de instalación 
-Para instalar el script, se debe ejecutar el siguiente comando en la terminal:
-
-Solo esta disponible para arch linux y solo verificado para las intel arc.
-
-```bash
-wget https://raw.githubusercontent.com/Mapachuelo/documentacion_linux/main/install.sh
-chmod +x install.sh
-./install.sh
-```
-
 ## Ver localmente
 Se requiere utilizar una app llamada `obsidian` para visualizar el contenido de este repositorio. Para ello, se debe clonar el repositorio y abrirlo con la aplicación.
 
