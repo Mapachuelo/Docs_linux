@@ -97,13 +97,27 @@ packeges_intel_arc(){
   clear
   echo "instalación de paquetes para intel arc"
   neko_arc
-  sudo pacman -S --noconfirm --needed \
-  libvdpau-va-gl intel-media-driver mesa \
-  vpl-gpu-rt vulkan-intel lib32-mesa lib32-vulkan-intel libva \
-  libva-utils intel-compute-runtime intel-gmmlib intel-gpu-tools vulkan-tools \
-  mesa-utils clinfo libvpl level-zero-loader level-zero-headers ocl-icd \
-  lib32-ocl-icd linux-firmware-intel fwupd vulkan-icd-loader lib32-vulkan-icd-loader \
-  vulkan-validation-layers lib32-libva-intel-driver
+  sudo pacman -Syu
+
+sudo pacman -S --needed \
+mesa lib32-mesa \
+vulkan-intel lib32-vulkan-intel \
+vulkan-icd-loader lib32-vulkan-icd-loader \
+vulkan-validation-layers \
+intel-media-driver \
+libva libva-utils \
+vpl-gpu-rt libvpl \
+intel-compute-runtime \
+level-zero-loader level-zero-headers \
+ocl-icd lib32-ocl-icd \
+intel-gmmlib \
+intel-gpu-tools \
+vulkan-tools \
+mesa-utils \
+clinfo \
+linux-firmware-intel \
+fwupd \
+libvdpau-va-gl
 }
 
 packeges_multimedia(){
@@ -112,6 +126,10 @@ packeges_multimedia(){
   neko_arc
   sudo pacman -S --noconfirm --needed ffmpeg gstreamer gst-libav gst-plugins-good \
   gst-plugins-bad gst-plugins-ugly gst-plugins-base aom dav1d rav1e svt-av1 x264 x265 
+
+# Ver si con eso funciona normal las intel arc
+# libva-intel-driver
+# lib32-libva-intel-driver 
 }
 
 packeges_xwayland(){
