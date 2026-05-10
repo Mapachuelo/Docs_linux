@@ -120,3 +120,14 @@ Si los archivos se movieron
 ```
 tail -n 20 ~/.cache/rclone/bisync.log
 ```
+
+## Fallas onedrive
+si tienes fallas utilice 
+```
+rclone bisync OneDrive: /home/mapachuelo/OneDrive/ --resync --resync-mode path2 --exclude "Personal Vault/**" --exclude "Almacén personal/**" -v
+```
+Sincroniza con la nube y local para no tener conflictos.
+Reiniciar el servicio para aplicar los cambios 
+```
+systemctl --user enable --now rclone-onedrive.timer
+```
