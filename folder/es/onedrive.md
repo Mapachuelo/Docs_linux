@@ -122,9 +122,14 @@ tail -n 20 ~/.cache/rclone/bisync.log
 ```
 
 ## Fallas onedrive
-si tienes fallas utilice 
+si tienes fallas de tener archivos locales
+Sincronizar tanto local como en la nube(puede ser archivos en la nube vuelvan a la carpeta local)
 ```
 rclone bisync OneDrive: /home/mapachuelo/OneDrive/ --resync --resync-mode path2 --exclude "Personal Vault/**" --exclude "Almacén personal/**" -v
+```
+Este para decir que los cambios debe aplicar son los locales y no online
+```
+rclone bisync OneDrive: ~/OneDrive --resync --resync-mode path2 --force --exclude "Personal Vault/**" --exclude "Almacén personal/**" --exclude "*{.~,tmp,bak}*" -v
 ```
 Sincroniza con la nube y local para no tener conflictos.
 Reiniciar el servicio para aplicar los cambios 
