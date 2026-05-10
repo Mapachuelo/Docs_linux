@@ -26,6 +26,12 @@ cat << "EOF"
 EOF
 }
 
+
+# prueba 
+# ver cual es compatible
+# /lib/ld-linux-x86-64.so.2 --help | grep supported
+
+
 setup-cachy-v3() {
   clear  
     echo "--- Configurando CachyOS v3 (Modo Restringido) ---"
